@@ -6,7 +6,6 @@ export function readAllPost() {
   return function (dispatch) {
     axios.get(`${END_POINT}/posts`)
       .then((response) => {
-        console.log(response.data);
         dispatch({ type: AT_POSTS.READ_ALL, payload: response.data })
       })
   }

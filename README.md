@@ -5,5 +5,6 @@ Pour installer le projet se placer dans le projet et lancer :
 ```
 > npm install
 > npm start
+> json-server --watch fillDB.js
 ```
 
