@@ -1,11 +1,15 @@
 import React from 'react';
 
-const PostListItem = () => {
+const PostListItem = (props) => {
+  const { post, key } = props
+
   return (
-    <div>
-      <p>Element de la liste</p>
-    </div>
+    <tr key={key}>
+      <td>{post.title}</td>
+      <td><button className="btn btn-danger">Supprimer</button></td>
+    </tr>
   );
+
 };
 
 export default PostListItem;
