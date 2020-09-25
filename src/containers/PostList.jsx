@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 // function mapDispatchToProps(dispatch) {
 //   return bindActionCreators({ readAllPost }, dispatch)
 // }
-const mapDispatchToProps = (dispatch) => ({
-  ...bindActionCreators({ readAllPost }, dispatch),
-})
+function mapDispatchToProps(dispatch) {
+  return { ...bindActionCreators({ readAllPost }, dispatch) }
+}
 export default connect(mapStateToProps, mapDispatchToProps)(PostList);

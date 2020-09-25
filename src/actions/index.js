@@ -2,6 +2,9 @@ import axios from 'axios'
 import { AT_POSTS } from './ActionTypes'
 const END_POINT = 'http://localhost:3000'
 
+/**
+ * action creator retourne l'ensemble des posts
+ */
 export function readAllPost() {
   return function (dispatch) {
     axios.get(`${END_POINT}/posts`)
@@ -10,6 +13,7 @@ export function readAllPost() {
       })
   }
 }
+
 export function readPost(id) {
   return function (dispatch) {
     axios.get(`${END_POINT}/posts/${id}`)
